@@ -597,10 +597,12 @@ ul {
 
       .header{
         height: 100%;
+        
       }
 
       #introduction {
         font-size: 0.5em;
+        top: 80%;
     }
     
 
