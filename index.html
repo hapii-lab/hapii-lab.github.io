@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="myScript.js"></script>
+    <script>
+        function openPublications() {
+        	document.getElementById("publications").style.width = "100%";
+            document.getElementById("closed").style.position = "fixed";
+            document.body.style.overflow = "hidden";
+      	}
+      	function closePublications() {
+        	document.getElementById("publications").style.width = "0%";
+            document.getElementById("closed").style.position = "absolute";
+            document.body.style.overflow = "auto";
+      	}
+    </script>
+    <title>the hapii Lab</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Introduction -->
+    <div class="header">
+        <header>
+            <nav class="navbar topnav" id="myTopnav">
+                <div id="myNavbar">
+                <!--<div class="navLeft">-->
+                    <a href="#introduction" id="hapii" class="navLeft">the <span class="hapii">hapii</span> lab</a>
+                <!--</div>-->
+                 <!--<div class="navRight" id="myNavbar">-->
+                    <a href="#about" class="navRight">about</a>
+                    <a href="#projects" class='navRight'>projects</a>
+                    <a href="#members" class='navRight'>members</a>
+                    <a href="#equipment" class='navRight'>equipment</a>
+                    <a href="#contact" class='navRight'>contact</a>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                 <!--</div>-->
+                 </div>
+            </nav>
+            <div id="introduction">
+                <!--<h1>Human-centered, <br>Adaptive, and Personalized<br> Information Interaction</h1>-->
+                <div class="hero-text">
+                    <h1>the <span class="hapii">hapii</span> lab</h1>
+                    <h2 class="headline">human-centered, <br>adaptive, and personalized<br> information interaction</h2>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main id="main">
+        <!-- About -->
+        <section id="about" class="about">
+            <h2 data-tooltip="I am a tooltip">about <span class="hapii">hapii</span></h2>
+            <p class="aboutSpace">The human-centered, adaptive, and personalized information interaction lab at Cal Poly Pomona aims to make users happy, by researching novel computing solutions that understand and support each individual person. Our expertise ranges across several areas, including:</p>
+            <div class="content-wrap centerContent">
+            <div class="column">
+
+                <!--<i class="fas fa-desktop icon" aria-hidden="true"></i>-->
+            <svg version="1.1" id="_x31_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="width: 51px; height: 51px; opacity: 1;" xml:space="preserve">
+            <style type="text/css">.st0{fill:#FFF;}</style>
+                <g>
+	               <path class="st0" d="M507.875,363.976h-28.402h-42.434h-99.004v4.058c0,3.055-0.734,5.91-2.035,8.458
+                    c-3.054,6.109-9.394,10.297-16.691,10.297H192.722c-7.297,0-13.633-4.188-16.718-10.297c-1.301-2.547-2.035-5.402-2.035-8.458
+                    v-4.058H74.965H32.531H4.156c-2.293,0-4.156,1.859-4.156,4.152v34.864c0,20.121,16.313,36.43,36.434,36.43H475.57
+                    c20.121,0,36.43-16.309,36.43-36.43v-34.891C512,365.824,510.156,363.976,507.875,363.976z"></path>
+	               <path class="st0" d="M429.969,335.968v0.16h42.43V118.082c0-25.133-20.375-45.504-45.504-45.504H85.137
+                    c-25.145,0-45.531,20.386-45.531,45.531v217.195v0.664v0.16h42.011l0.258,0.004v-0.004h0.16V118.109
+                    c0-1.711,1.39-3.102,3.102-3.102h341.758c1.699,0,3.074,1.379,3.074,3.074v217.222V335.968z"></path>
+                    <path class="st0" d="M239.406,256.312c-1.141,1.05-5.199,4.262-12.344,7.926c-9.82,5.02-21.289,10.867-23.836,13.188
+                    c-1.984,1.785-4.484,5.492-6.558,10.355c-0.45,1.074-0.894,2.187-1.297,3.371c-0.379,1.07-0.734,2.183-1.023,3.347
+                    c-0.402,1.406-0.715,2.856-0.985,4.352c-0.488,2.855,1.25,5.602,4.039,6.316c16.359,4.172,36.645,6.649,58.629,6.649
+                    c21.961,0,42.226-2.477,58.562-6.625c2.813-0.715,4.555-3.485,4.039-6.34c-0.266-1.496-0.602-2.946-0.981-4.352
+                    c-0.312-1.164-0.648-2.277-1.05-3.347c-0.379-1.184-0.824-2.297-1.293-3.371c-2.055-4.863-4.555-8.547-6.539-10.355
+                    c-2.543-2.344-14.062-8.188-23.883-13.188c-7.16-3.683-11.203-6.875-12.363-7.926v-6.203v-3.414
+                    c0.535-0.202,1.051-0.582,1.539-1.117c0.09-0.09,0.18-0.18,0.246-0.289c1.363-1.539,2.48-3.282,3.035-4.91
+                    c0.07-0.199,0.137-0.402,0.203-0.602c1.226-3.484,2.164-7.41,2.343-8.527c0.016-0.094,0.024-0.164,0.035-0.238
+                    c0.004-0.012,0.012-0.035,0.016-0.047c0.508,0.153,1,0.219,1.422,0.219c5.176,0,7.297-10.602,7.586-13.39
+                    c0.312-2.813-2.188-4.731-3.102-5.469c0.199-0.446,0.449-1.114,0.691-1.895c0.023-0.046,0.046-0.113,0.066-0.179
+                    c0.312-0.961,0.762-2.254,1.16-4.062c0.246-1.07,0.469-2.344,0.672-3.84c0.133-0.914,0.156-1.894,0.11-2.855
+                    c-0.066-2.008-0.489-4.082-1.227-5.981c-0.602-1.649-1.449-3.168-2.476-4.398l-0.024-0.019c-0.714-0.848-1.515-1.719-2.363-2.5
+                    c-3.347-3.238-7.297-5.848-9.152-5.848c-3.75-6.738-8.547-11.118-17.43-11.718c-0.535-0.02-1.07-0.02-1.649-0.039h-0.113
+                    c-6.696,0-17.989,5.754-23.746,13.609c0,0.024,0,0.024,0,0.024c-0.582,0.781-1.094,1.586-1.539,2.386
+                    c-0.762,1.383-1.453,2.68-2.031,3.906c-0.938,1.988-1.652,3.84-2.098,5.691c-0.27,0.871-0.449,1.762-0.535,2.68
+                    c-0.382,2.586-0.313,5.332,0.199,8.637v0.019c0.199,1.363,0.469,2.836,0.824,4.418c0.024,0.023,0.024,0.046,0.024,0.07
+                    c0.175,0.512,0.328,0.86,0.484,1.242c0.031,0.266,0.012,0.562-0.039,0.879c-1,0.762-2.789,1.98-2.542,4.527
+                    c0.289,2.813,2.098,14.106,7.277,14.106c0.469,0,0.958-0.066,1.493-0.222c0.09,0.894,0.558,3.437,1.519,6.023
+                    c0.27,0.762,0.578,1.722,0.914,2.722c0.066,0.203,0.133,0.383,0.199,0.582c0.558,1.609,1.609,3.347,2.926,4.843
+                    c0.133,0.157,0.289,0.313,0.426,0.469c0.488,0.512,1.004,0.891,1.539,1.094v3.348V256.312z"></path>
+	               <polygon class="st0" points="139.504,248.914 139.504,249.074 180.504,249.074 180.504,241.074 139.504,241.074 139.504,248.891"></polygon>
+	               <polygon class="st0" points="331.504,248.914 331.504,249.074 372.504,249.074 372.504,241.074 331.504,241.074 331.504,248.891"></polygon>
+                </g>
+            </svg>
+                <p>Usability & User Experience</p>
+            </div>
+
+            <div class="column">
+                <i class="fas fa-globe icon" aria-hidden="true"></i>
+                <p>Web & Information Science</p>
+            </div>
+
+            <div class="column">
+                <i class="far fa-chart-bar icon" aria-hidden="true"></i>
+                <p>Data Visualization</p>
+            </div>
+
+            </div>
+        </section>
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <h2><span class="hapii">hapii</span> projects</h2>
+            <div class="content-wrap">
+                <div class="content-wrap projectSpace">
+                    <section class="multilingualSearch">
+                        <h3 class="columnLeft">Personalized Multilingual Information Access</h3>
+                        <p class="columnRight">More than half of the world's population is proficient in at least two languages. In this project, we aim to analyze language preferences and behaviors of individual users accessing information, and to develop novel personalized multilingual search and recommender systems.</p>
+                    </section>
+                </div>
+                <div class="content-wrap projectSpace">
+                    <section class="aggregatedSearch">
+                        <h3 class="columnLeft">Adaptive Information Visualization</h3>
+                        <p class="columnRight">Information Visualization is one of the most powerful tools to overcome information overload. In this project, we aim to analyze how different people interact and synthesize information using different visualizations, and to develop more usable and personalized visualizations that are tailored to each individual user.</p>
+                    </section>
+                </div>
+                <div class="content-wrap projectSpace">
+                    <section class="informationVisualization">
+                        <h3 class="columnLeft">Misinformation</h3>
+                        <p class="columnRight">One of the most pressing issues in the Information Age is the creation and spread of misinformation. In this project, we aim to analyze the effect of different types of misinformation on different users, and develop systems that can detect and correct misinformation through personalized support.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- Lab Members -->
+        <section class="members" id="members">
+            <h2><span class="hapii">hapii</span> members</h2>
+
+            <div class="content-wrap picture-header">
+                <div class="content-wrap picture-header"><span class="hapii">hapii</span> faculty</div>
+            </div>
+            
+            <div class="content-wrap bio">
+                <div class="content-wrap">
+                    <div class="container colcenterp bio-image">
+                          <img src="images/Steichen.jpg" alt="Dr. Ben Steichen" class="image">
+                          <div class="overlay">
+                            <div class="text">Dr. Ben Steichen<br><div class="membersTextFormatt">Faculty</div></div>
+                          </div>
+                    </div>
+
+                    <div>
+                        <div class="overlay">
+                          <div class="text"><a href="https://www.cpp.edu/~bsteichen/" >Dr. Ben Steichen</a><br><div class="membersTextFormatt">Faculty</div></div>
+                        </div>
+                  </div>
+
+
+                  <div class="container colcenterp bio-text">
+                     <div>
+                        <p>
+                            Dr. Ben Steichen is an Associate Professor in the Computer Science Department at <a href="http://www.cpp.edu">California State Polytechnic University, Pomona</a>. Dr. Steichen's research focuses on Human-Centered Computing and Personalized Information Access, which involves techniques and concepts from the fields of Human-Computer Interaction, Information Retrieval & Visualization, and Web & Information Science.
+                        </p>
+                        <p>
+                            Before moving to CPP, he was an Assistant Professor at <a href="https://www.scu.edu">Santa Clara University</a>. Prior to this, he was a Postdoctoral Research Fellow at the <a href="https://www.ubc.ca">University of British Columbia</a>. He received his PhD from <a href="https://www.tcd.ie">Trinity College Dublin</a> (TCD), an M.Sc. degree in Computer Science from TCD, and a First Class Honours B.Sc. degree in Computing Sciences from the <a href="https://www.uea.ac.uk">University of East Anglia</a>.
+                        </p>
+
+                        <p> <button onclick="openPublications()">Publications</button></p>
+                       
+
+
+
+
+
+
+                        <div id="publications" class="overlay-effect">
+                            <a href="javascript:void(0)" id="closed" onclick="closePublications()">&times;</a>
+                            <div class="overlay-content">
+                                <section id="PublicationList">
+                                    <h1>Publications</h1>
+                        
+                                    <h2>
+                                    Journal and conference articles
+                                    </h2>
+                        
+                                <p>
+                                Steichen, B., Kosasih, W., Becerra, C. <a href="https://dl.acm.org/doi/abs/10.1145/3498366.3505771">Inferring Search User Language Proficiency from Eye Gaze Data.</a> Proceedings of the 7th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2022), pp. 211-220, 2022.
+                                </p>
+                                <p>
+                                Fu, B., Steichen, B. Impending Success or Failure? An Investigation of Gaze-Based User Predictions During Interaction with Ontology Visualizations. Proceedings of the International Conference on Advanced Visual Interfaces (AVI 2022), 2022. [To Appear]
+                                </p>
+                                <p>
+                                Fu, B., Steichen, B. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJIIDS.2022.120143">Supporting User-Centered Ontology Visualization: Predictive Analytics using Eye Gaze to Enhance Human-Ontology Interaction</a>, International Journal of Intelligent Information and Database Systems, Vol. 15, No. 1, 2022.
+                                </p>
+                                <p>
+                                Steichen, B., Lowe, R. <a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24443">How do multilingual users search? An investigation of query and result list language choices.</a> Journal of the Association for Information Science and Technology, 72(6), pp.759-776, 2021.
+                                </p>
+                              <p>
+                                    Steichen, B., Fu, B. <a href='https://www.frontiersin.org/articles/10.3389/fcomp.2020.562290/full'>Cognitive Style and Information Visualization - Modeling Users Through Eye Gaze Data.</a> Frontiers in Computer Science, 2, 49, 2020.
+                                </p>
+                                <p>
+                                    Steichen, B., Castillo, C., Scroggins, K. <a href='https://dl.acm.org/doi/abs/10.1145/3340631.3394877'>Personalized Multilingual Search - Predicting Search Result List Language Preferences</a>. Proceedings of the international ACM conference on User Modeling, Adaptation, and Personalization (UMAP 2020), pp. 343-347, 2020.
+                                </p>
+                                <p>
+                                    Steichen, B., Fu, B., Nguyen, T. <a href='https://dl.acm.org/doi/abs/10.1145/3340631.3394881'>Inferring Cognitive Style from Eye Gaze Behavior During Information Visualization Usage</a>. Proceedings of the international ACM conference on User Modeling, Adaptation, and Personalization (UMAP 2020), pp. 348-352, 2020.
+                                </p>
+                                <p>
+                                Fu, B., Steichen, B., McBride, A. <a href='https://dl.acm.org/doi/10.1145/3405962.3405966'>Tumbling to Succeed: A Predictive Analysis of User Success in Interactive Ontology Visualization.</a> Proceedings of the 10th International Conference on Web Intelligence, Mining and Semantics (WIMS’20), 2020.
+                                </p>
+                                <p>
+                                Ling, C., Steichen, B., Figueira, S. <a href='https://www.tandfonline.com/doi/full/10.1080/10447318.2019.1662636'>Multilingual News - An Investigation of Consumption, Querying, and Search Result Selection Behaviors.</a> International Journal of Human-Computer Interaction, 36(6), 2019.
+                                </p>
+                                <p>
+                                Steichen, B., Fu, B. <a href='https://www.frontiersin.org/articles/10.3389/frai.2019.00022/full'>Towards Adaptive Information Visualization - a Study of Information Visualization Aids and the Role of User Cognitive Style.</a> Frontiers in Artificial Intelligence, 2, 22, 2019.
+                                </p>
+                                <p>
+                                Fu, B., Steichen, B., Zhang, W. <a href='http://dx.doi.org/10.1142/S1793351X1940018X'>Towards Adaptive Ontology Visualization - Predicting User Success from Behavioral Data.</a> International Journal of Semantic Computing, 13(4), 2019.
+                                </p>
+                                    <p>
+                                    Fu, B., Steichen, B. <a href='https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8665670'>Using Behavior Data to Predict User Success in Ontology Class Mapping – An Application of Machine Learning in Interaction Analysis.</a> Proceedings of the 13th IEEE International Conference on Semantic Computing (ICSC 2019), pp. 216-223, 2019.  <span class='award'>(Best Paper nominee)</span>
+                                    </p>
+                                    <p>
+                                    Ling, C., Steichen, B., Choulos, A. <a href='https://dl.acm.org/citation.cfm?id=3176383'>A Comparative User Study of Interactive Multilingual Search Interfaces.</a> Proceedings of the 2018 Conference on Human Information Interaction & Retrieval (CHIIR '18), pp. 211-220, 2018.
+                                    </p>
+                                    <p>
+                                    Lowe, R., Steichen, B. <a href='http://dl.acm.org/citation.cfm?id=3079702'>Multilingual Search User Behaviors – Exploring Multilingual Querying and Result Selection Through Crowdsourcing.</a> Proceedings of the international conference on User Modeling, Adaptation, and Personalization (UMAP 2017), pp. 303-307, 2017.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Freund, L. <a href='http://dl.acm.org/citation.cfm?id=2702541'>Supporting the Modern Polyglot - A Comparison of Multilingual Search Interfaces.</a> Proceedings of the ACM CHI Conference on Human Factors in Computing Systems (CHI 2015), pp. 3483-3492, 2015.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Ghorab, M. R., Lawless, S., O'Connor, A., Wade, V. <a href='http://dx.doi.org/10.1007/978-3-319-08786-3_39'>Towards Personalized Multilingual Information Access - Exploring the Browsing and Search Behavior of Multilingual Users.</a> Proceedings of the international conference on User Modeling, Adaptation, and Personalization (UMAP 2014), pp. 435-446, 2014.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Carenini, G., Conati, C. <a href='http://doi.acm.org/10.1145/2633043'>Inferring Visualization Task Properties, User Performance, and User Cognitive Abilities from Eye Gaze Data.</a> ACM Transactions on Interactive Intelligent Systems, 4, 2, Article 11, 2014. <span class='award'>(Best Paper Award)</span>
+                                    </p>
+                                    <p>
+                                    Conati, C., Carenini, G., Hoque, E., Steichen, B., Toker, D. <a href='http://onlinelibrary.wiley.com/doi/10.1111/cgf.12393/full'>Evaluating the Impact of User Characteristics and Different Layouts on an Interactive Visualization for Decision Making.</a> Computer Graphics Forum, Volume 33, Issue 3, pp. 371–380, 2014.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Wu, M. M. A., Toker, D., Conati, C., Carenini, G. <a href='http://dx.doi.org/10.1007/978-3-319-08786-3_16'>Te,Te,Hi,Hi: Eye Gaze Sequence Analysis for Informing User-Adaptive Information Visualizations.</a> Proceedings of the international conference on User Modeling, Adaptation, and Personalization (UMAP 2014), pp. 183-194, 2014. <span class='award'>(Best Paper Award)</span>
+                                    </p>
+                                    <p>
+                                    Carenini, G., Conati, C., Steichen, B., Toker, D., and Enns, J. <a href='http://dl.acm.org/citation.cfm?id=2557141'>Highlighting Interventions and User Differences: Informing Adaptive Information Visualization Support.</a> Proceedings of the ACM CHI Conference on Human Factors in Computing Systems (CHI 2014), pp. 1835-1844, 2014.
+                                    </p>
+                                    <p>
+                                    Toker, D., Steichen, B., Gingerich, M., Conati, C., Carenini, G. <a href='http://dl.acm.org/citation.cfm?id=2557524'>Towards facilitating user skill acquisition - Identifying untrained visualization users through eye tracking.</a> Proceedings of the International Conference on Intelligent User Interfaces (IUI 2014), pp. 105-114, 2014. <span class='award'>(Best Paper nominee)</span>
+                                    </p>
+                                    <p>
+                                    Toker, D., Conati, C., Steichen, B., Carenini G., <a href='http://dl.acm.org/citation.cfm?id=2470696'>Individual User Characteristics and Information Visualization: Connecting the Dots through Eye Tracking.</a> Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems (CHI 2013), pp. 295-304, 2013.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Ashman, H., Wade, V. <a href="http://www.sciencedirect.com/science/article/pii/S0306457311001178">A comparative survey of Personalised Information Retrieval and Adaptive Hypermedia techniques.</a> Information Processing &amp; Management, Volume 48, Issue 4, pp. 698–724, 2012.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Carenini, G., Conati, C. <a href='http://dl.acm.org/citation.cfm?id=2449439'>User-Adaptive Information Visualization - Using eye gaze data to infer visualization tasks and user cognitive abilities.</a> Proceedings of the International Conference on Intelligent User Interfaces (IUI 2013), pp. 317-328, 2013. <span class='award'>(Best Paper nominee)</span>
+                                    </p>
+                                    <p>
+                                        Steichen, B., O'Connor, A., Wade, V. <a href="http://portal.acm.org/citation.cfm?id=1995979">Personalisation in the Wild - Providing Personalisation across Semantic, Social and Open-Web Resources.</a> In Proceedings of the 22nd ACM conference on Hypertext and hypermedia (HT '11), pp. 73-82, 2011.
+                                    </p>
+                                    <p>
+                                        Steichen, B., Lawless, S., O'Connor, A., Wade, V. <a href="http://portal.acm.org/citation.cfm?id=1557914.1557937">Dynamic hypertext generation for reusing open corpus content.</a> In Proceedings of the 20th ACM conference on Hypertext and hypermedia (HT '09), pp. 119-128, 2009.
+                                    </p>
+                                    <p>
+                                        Steichen, B., Clarke, S. <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=4679102">Wireless Collaboration for Context-Aware Services using Mobile Networked Applications.</a> In Proceedings of the 4th IEEE International Conference on Wireless Communications, Networking and Mobile Computing (WiCom 2008), ISBN 978-1-4244-2107-7, pp.1-9, 2008.
+                                    </p>
+                                    <p>
+                                        Fu, B., Bernáth, G., Steichen, B., Weber, S. <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=4678346">Wireless Background Noise in the Wi-Fi Spectrum.</a> In Proceedings of the 4th IEEE International Conference on Wireless Communications, Networking and Mobile Computing (WiCom 2008), ISBN 978-1-4244-2107-7, pp. 1-7, 2008.<br />
+                                    </p>
+                        
+                                    <br />
+                        
+                                    <h2>Conference posters & workshop articles</h2>
+                        
+                                    <p>
+                                    Gadon, A., Steichen, B., Leon, J. <a href='https://www.sccur.org/sccur/fall_2019_conference/poster_session_4/78/'>Bridging the Online Language Gap with Polyvox.</a> Southern California Conferences for Undergraduate Research, 2019.
+                                    </p>
+                        
+                                    <p>
+                                    Castillo, C., Scroggins, K., Steichen, B. <a href='https://www.sccur.org/sccur/fall_2019_conference/poster_session_2/82/'>Supporting Multilingual Users Through Personalized Multilingual Search.</a> Southern California Conferences for Undergraduate Research, 2019.
+                                    </p>
+                        
+                                    <p>
+                                    Daroy, P., Steichen, B. <a href='https://www.sccur.org/sccur/fall_2019_conference/poster_session_2/77/'>Personalized Information Visualization Through the Use of Adaptive Overlays.</a> Southern California Conferences for Undergraduate Research, 2019.
+                                    </p>
+                        
+                                    <p>
+                                    Castillo, C., Chen, K., Steichen, B. <a href='https://www.sccur.org/sccur/FALL_2018_CONFERENCE/ENGR_COMP_POSTERS/29/'>Towards Multilingual Search – Gathering Multilingual Query Logs using Crowdsourcing.</a> Southern California Conferences for Undergraduate Research, 2018.
+                                    </p>
+                        
+                                    <p>
+                                    Pierre-Louis, D., Arima, J., Steichen, B. <a href='https://www.sccur.org/sccur/FALL_2018_CONFERENCE/ENGR_COMP_POSTERS/55/'>Cookies for Breakfast, Lunch, and Dinner: Designing a GDPR Compliant Accountability Tool for Web Services and Web Apps.</a> Southern California Conferences for Undergraduate Research, 2018.
+                                    </p>
+                        
+                                    <p>
+                                    Koidl, K., Levacher, K., Conlan, O., Steichen, B. <a href='http://ceur-ws.org/Vol-1618/EvalUMAP_paper_1.pdf'>ECP: Evaluation Community Portal - A Portal for Evaluation And Collaboration in User Modelling and Personalisation Research.</a> Proceedings of the EvalUMAP2016 Workshop: Towards Comparative Evaluation in the User Modelling, Adaptation and Personalization Space, in conjunction with the 24th conference on User Modeling, Adaptation and Personalization (UMAP 2016), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-1618, 2016.
+                                    </p>
+                        
+                                    <p>
+                                    Toker, D., Steichen, B., Birk, M. <a href='http://ceur-ws.org/Vol-1181/umap2014_poster_10.pdf'>Predicting Player Type in Social Network Games.</a> Extended proceedings of the international conference on User Modeling, Adaptation, and Personalization (UMAP 2014), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-1181, 2014.
+                                    </p>
+                        
+                                    <p>
+                                    Steichen, B., Schmid, O., Conati, C., Carenini, G. <a href='http://ceur-ws.org/Vol-997/wuav2013_paper_07.pdf'>Seeing how you’re looking - Using Real-Time Eye Gaze Data for User-Adaptive Visualization.</a> Proceedings of the 1st International Workshop on User-Adaptive Information Visualization (WUAV 2013), in conjunction with the 21st conference on User Modeling, Adaptation and Personalization (UMAP 2013), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-997, 2013.
+                                    </p>
+                        
+                                    <p>
+                                    Conati, C., Hoque, E., Toker, D., Steichen, B. <a href='http://ceur-ws.org/Vol-997/wuav2013_paper_04.pdf'>When to Adapt: Detecting User’s Confusion During Visualization Processing.</a> Proceedings of the 1st International Workshop on User-Adaptive Information Visualization (WUAV 2013), in conjunction with the 21st conference on User Modeling, Adaptation and Personalization (UMAP 2013), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-997, 2013.
+                                    </p>
+                        
+                                    <p>
+                                    Carenini, G., Conati, C., Hoque, E., Steichen, B. <a href='http://ceur-ws.org/Vol-997/wuav2013_paper_02.pdf'>User Task Adaptation in Multimedia Presentations.</a> Proceedings of the 1st International Workshop on User-Adaptive Information Visualization (WUAV 2013), in conjunction with the 21st conference on User Modeling, Adaptation and Personalization (UMAP 2013), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-997, 2013.
+                                    </p>
+                        
+                                    <p>
+                                        Steichen, B., Carenini, G., Conati, C. <a href="http://ceur-ws.org/Vol-872/umap2012_poster_02.pdf">Adaptive Information Visualization - Predicting user characteristics and task context from eye gaze.</a> Poster and Workshop Proceedings of the 20th conference on User Modeling, Adaptation and Personalization (UMAP 2012), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-872, 2012.
+                                    </p>
+                        
+                                    <p>
+                                        Ghorab, M. R., Zhou, D., Steichen, B., Wade, V. <a href='http://dl.acm.org/citation.cfm?id=2047411&amp;dl=ACM/'>Towards Multilingual User Models for Personalized Multilingual Information Retrieval.</a> In Proceedings of the 1st Workshop on Personalized Multilingual Hypertext Retrieval (PMHR 2011), in conjunction with the 22nd ACM conference on Hypertext and hypermedia (HT '11), 2011.
+                                    </p>
+                        
+                                    <p>
+                                        Steichen, B., Wade, V. <a href='http://ceur-ws.org/Vol-590/sasweb10_1.pdf'>Adaptive Retrieval and Composition of Socio-Semantic Content for Personalised Customer Care.</a> In Proceedings of the International Workshop on Adaptation in Social and Semantic Web (SAS-WEB 2010), in conjunction with the 19th conference on User Modeling, Adaptation and Personalization (UMAP 2010), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-590, pp. 1-10, 2010.
+                                    </p>
+                        
+                                    <br />
+                        
+                                    <h2>Proceedings editing & workshop reports</h2>
+                                    <p>
+                                    Germanakos, P., Dimitrova, V., Steichen, B., Piotrkowicz, A. <a href="https://dl.acm.org/doi/fullHtml/10.1145/3450614.3461447">HAAPIE 2021: 6th International Workshop on Human Aspects in Adaptive and Personalized Interactive Environments.</a> Adjunct Proceedings of the 29th international ACM conference on User Modeling, Adaptation, and Personalization (UMAP 2021), 2021.
+                                </p>
+                                    <p>
+                                    Germanakos, P., Dimitrova, V., Steichen, B., Piotrkowicz, A. <a href='https://dl.acm.org/doi/abs/10.1145/3386392.3399332'>HAAPIE 2020: 5th International Workshop on Human Aspects in Adaptive and Personalized Interactive Environments Chairs' Welcome.</a> Adjunct Publication of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP '20 Adjunct), 2020.
+                                    </p>
+                                    <p>
+                                    Germanakos, P., Dimitrova, V., Steichen, B., Piotrkowicz, A. <a href='https://dl.acm.org/citation.cfm?id=3323856'>UMAP 2019 HAAPIE (Human Aspects in Adaptive and Personalized Interactive Environments) Workshop Chairs' Welcome.</a> Adjunct Publication of the 27th Conference on User Modeling, Adaptation and Personalization (UMAP'19 Adjunct), 2019.
+                                    </p>
+                                    <p>
+                                    Kleanthous, S., Bielikova, M., and Steichen, B. <a href='https://dl.acm.org/citation.cfm?id=3324969'>UMAP 2019 Demo and Late-Breaking Results - Chairs' Preface.</a> Adjunct Publication of the 27th Conference on User Modeling, Adaptation and Personalization (UMAP'19 Adjunct), 2019.
+                                 </p>
+                              <p>
+                                    Germanakos, P., Kleanthous-Loizou, S., Samaras, G., Dimitrova, V., Steichen, B., Piotrkowicz, A. <a href='https://dl.acm.org/citation.cfm?id=3226190'>3rd International Workshop on Human Aspects in Adaptive and Personalized Interactive Environments (HAAPIE 2018).</a> Adjunct Publication of the 26th international conference on User Modeling, Adaptation and Personalization (UMAP 2018), 2018.
+                                    </p>
+                                    <p>
+                                    Germanakos, P., Kleanthous-Loizou, S., Samaras, G., Dimitrova, V., Steichen, B. <a href='http://dl.acm.org/citation.cfm?id=3099050'>2nd International Workshop on Human Aspects in Adaptive and Personalized Interactive Environments (HAAPIE 2017).</a> Adjunct Publication of the 25th international conference on User Modeling, Adaptation and Personalization (UMAP 2017), pp. 213-214, 2017.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Ferro, N., Lewis, D., Chi, E.H. <a href='http://www.www2015.it/documents/proceedings/companion/p833.pdf'>1st International Workshop on Multilingual Web Access (MWA 2015) - Chairs’ Welcome.</a> Companion proceedings of the 24th international conference on World Wide Web, 2015.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Ferro, N., Lewis, D., Chi, E. H. <a href='http://www.sigir.org/files/forum/2015D/p137.pdf'>1st International Workshop on Multilingual Web Access (MWA 2015).</a> SIGIR Forum 49, 2 (January 2016), 137-140, 2016.
+                                    </p>
+                                    <p>
+                                    Steichen, B., Ruotsalo, T., Agosti, M., Jacucci, G., Lawless, S., Brusilovsky, P., Wade, V., Kaski, S., Barral, O. <a href='http://ceur-ws.org/Vol-1181/pia2014_preface.pdf'>Joint Workshop on Personalized Information Access-PIA 2014.</a> Extended proceedings of the international conference on User Modeling, Adaptation, and Personalization (UMAP 2014), CEUR Workshop Proceedings, ISSN 1613-0073, Vol-1181, 2014.
+                                    </p>
+                        
+                                    <br />
+                        
+                                    <h2>Theses</h2>
+                                    <p>
+                                    Steichen B., <a href="files/PhD-Thesis.pdf">Adaptive Retrieval, Composition &amp; Presentation of Closed-Corpus and Open-Corpus Information.</a> PhD thesis. School of Computer Science and Statistics, Trinity College Dublin, 2012. <span class='award'>(Best Thesis Award)</span>
+                                    </p>
+                                    <p>
+                                    Steichen B., <a href="files/MSc-Thesis.pdf">Activity Dispatching for Cooperative Trails-based Applications.</a> MSc thesis. School of Computer Science and Statistics, Trinity College Dublin, 2007.
+                                    </p>
+                                </section>
+                            </div>
+                          </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>       
+            </div>
+            </div>
+
+
+
+            <br><br>
+
+            <div class="content-wrap picture-header">
+                <div class="content-wrap picture-header"><span class="hapii">hapii</span> students</div>
+            </div>
+
+            <div class="content-wrap">
+                <div class="content-wrap">
+                    
+                    
+
+                    <div class="container colcenterp">
+                        <img src="images/kyle.png" alt="Kyle Ah-Tye" class="image">
+                        <div class="overlay">
+                            <div class="text">Kyle Ah-Tye<br><div class="membersTextFormatt">Graduate Student</div></div>
+                        </div>
+                    </div>
+					<div class="container colcenterp">
+                          <img src="images/christian.jpg" alt="Christian Becerra" class="image">
+                          <div class="overlay">
+                            <div class="text">Christian Becerra<br><div class="membersTextFormatt">Graduate Student</div></div>
+                          </div>
+                    </div>
+                    <div class="container colcenterp">
+                          <img src="images/Castillo.png" alt="Carla Castillo" class="image">
+                          <div class="overlay">
+                            <div class="text">Carla Castillo<br><div><div class="membersTextFormatt">Undergraduate Student</div></div></div>
+                          </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/kailie.png" alt="Kailie Chang" class="image">
+                        <div class="overlay">
+                            <div class="text">Kailie Chang<br><div class="membersTextFormatt">Graduate Student</div></div>
+                        </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/weihsuan-chen.jpg" alt="Wei Hsuan Chen" class="image">
+                        <div class="overlay">
+                            <div class="text">Wei Hsuan Chen<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/nate.png" alt="Huy Doan" class="image">
+                        <div class="overlay">
+                            <div class="text">Nate Colbert<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/Patriz.png" alt="Patriz Daroy" class="image">
+                        <div class="overlay">
+                            <div class="text">Patriz Daroy<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/isabel.png" alt="Isabel DeLaPaz" class="image">
+                        <div class="overlay">
+                            <div class="text">Isabel DeLaPaz<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>	
+
+                    
+                     <div class="container colcenterp">
+                         <img src="images/huy.png" alt="Huy Doan" class="image">
+                         <div class="overlay">
+                             <div class="text">Huy Doan<br><div class="membersTextFormatt">Graduate Student</div></div>
+                         </div>
+                     </div>			
+                    <div class="container colcenterp">
+                        <img src="images/angela.jpg" alt="Angela Gadon" class="image">
+                        <div class="overlay">
+                            <div class="text">Angela Gadon<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/alex.png" alt="Alex Garcia" class="image">
+                        <div class="overlay">
+                            <div class="text">Alex Garcia<br><div class="membersTextFormatt">Graduate Student</div></div>
+                        </div>
+                    </div>
+                    <div class="container colcenterp">
+                        <img src="images/diego.png" alt="Diego Garcia" class="image">
+                        <div class="overlay">
+                            <div class="text">Diego Garcia<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="container colcenterp">
+                        <img src="images/rachelG.png" alt="Rachel Goodrich" class="image">
+                        <div class="overlay">
+                            <div class="text">Rachel Goodrich<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                    </div>
+   
+                       <div class="container colcenterp">
+                           <img src="images/daeyoung.png" alt="Daeyoung Hwang" class="image">
+                           <div class="overlay">
+                               <div class="text">Daeyoung Hwang<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                           </div>
+                       </div>
+
+                    <div class="container colcenterp">
+                       <img src="images/Arima.jpg" alt="Jinjing Lee" class="image">
+                       <div class="overlay">
+                           <div class="text">Jinjing Lee<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                       </div>
+                   </div>
+                   <div class="container colcenterp">
+                         <img src="images/jesus.jpg" alt="Jesus Leon" class="image">
+                         <div class="overlay">
+                             <div class="text">Jesus Leon<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                         </div>
+                   </div>
+                   <div class="container colcenterp">
+                      <img src="images/Chenjun.png" alt="Chenjun Ling" class="image">
+                      <div class="overlay">
+                          <div class="text">Chenjun Ling<br><div class="membersTextFormatt">Graduate Student</div></div>
+                      </div>
+                  </div>
+                  <div class="container colcenterp">
+                      <img src="images/wilsen.jpeg" alt="Wilsen Kosasih" class="image">
+                      <div class="overlay">
+                          <div class="text">Wilsen Kosasih<br><div class="membersTextFormatt">Graduate Student</div></div>
+                      </div>
+                  </div>
+                  <div class="container colcenterp">
+                      <img src="images/rachel.png" alt="Rachel Lewis" class="image">
+                      <div class="overlay">
+                          <div class="text">Rachel Lewis<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                      </div>
+                  </div>
+                  <div class="container colcenterp">
+                      <img src="images/luc.jpg" alt="Raymond Luc" class="image">
+                      <div class="overlay">
+                          <div class="text">Raymond Luc<br><div class="membersTextFormatt">Graduate Student</div></div>
+                      </div>
+                  </div>
+
+                  <div class="container colcenterp">
+                    <img src="images/danielle.png" alt="Danielle Makiling" class="image">
+                    <div class="overlay">
+                        <div class="text">Danielle Makiling<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                    </div>
+                </div>
+
+                <div class="container colcenterp">
+                    <img src="images/Nana.png" alt="Nana Mimura" class="image">
+                    <div class="overlay">
+                        <div class="text">Nana Mimura<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                    </div>
+                </div>
+                
+
+                   <div class="container colcenterp">
+                       <img src="images/todd-nguyen.jpg" alt="Todd Nguyen" class="image">
+                       <div class="overlay">
+                           <div class="text">Todd Nguyen<br><div class="membersTextFormatt">Graduate Student</div></div>
+                       </div>
+                   </div>
+                  <div class="container colcenterp">
+                      <img src="images/deep.png" alt="Deep Parekh" class="image">
+                      <div class="overlay">
+                          <div class="text">Deep Parekh<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                      </div>
+                  </div>
+
+                  <div class="container colcenterp">
+                    <img src="images/Nicholas.png" alt="Nicholas Piazza" class="image">
+                    <div class="overlay">
+                        <div class="text">Nicholas Piazza<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                    </div>
+                </div>
+
+                  
+                  <div class="container colcenterp">
+                        <img src="images/Pierre-Louis.jpeg" alt="Dimitri Pierre-Louis" class="image">
+                        <div class="overlay">
+                            <div class="text">Dimitri Pierre-Louis<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                  </div>
+				  
+                  <div class="container colcenterp">
+                      <img src="images/jay.png" alt="Jay Savla" class="image">
+                      <div class="overlay">
+                          <div class="text">Jay Savla<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                      </div>
+                  </div>
+				  
+                   <div class="container colcenterp">
+                       <img src="images/Scroggins.png" alt="Kevin Scroggins" class="image">
+                        <div class="overlay">
+                             <div class="text">Kevin Scroggins<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                        </div>
+                  </div>
+				  
+                  <div class="container colcenterp">
+                      <img src="images/camryn.png" alt="Camryn Sumabat" class="image">
+                      <div class="overlay">
+                          <div class="text">Camryn Sumabat<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                      </div>
+                  </div>
+
+                 
+                
+                <div class="container colcenterp">
+                    <img src="images/kayla.png" alt="sheCodes Member" class="image">
+                    <div class="overlay">
+                        <div class="text">Kayla Tang<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                    </div>
+                </div>
+				  
+				  
+                  <div class="container colcenterp">
+                      <img src="images/shannon.png" alt="Shannon Trinh" class="image">
+                      <div class="overlay">
+                          <div class="text">Shannon Trinh<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                      </div>
+                  </div>
+				  
+                  <div class="container colcenterp">
+                    <img src="images/alysia.png" alt="Alysia Wong" class="image">
+                    <div class="overlay">
+                        <div class="text">Alysia Wong<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                    </div>
+                </div>
+                  
+
+                   <div class="container colcenterp">
+                       <img src="images/milush.png" alt="Milush Yanev" class="image">
+                       <div class="overlay">
+                           <div class="text">Milush Yanev<br><div class="membersTextFormatt">Graduate Student</div></div>
+                       </div>
+                   </div>
+				  
+                  <div class="container colcenterp">
+                      <img src="images/eli.png" alt="Eli Zupke" class="image">
+                      <div class="overlay">
+                          <div class="text">Eli Zupke<br><div class="membersTextFormatt">Undergraduate Student</div></div>
+                      </div>
+                  </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- Equipment -->
+        <section class="equipment" id="equipment">
+            <h2><span class="hapii">hapii</span> equipment</h2>
+            <div class="content-wrap">
+
+            <img src="images/Eyetracker.png" alt="eyetracker" class="image equipmentColumnLeft">
+            <p class="equipmentColumnRight">The <span class="hapii">hapii</span> lab uses state-of-the-art usability and user experience research equipment, including eye trackers and other physiological sensors. This enables us to perform detailed experiments and analyses of natural user behaviors and experiences.</p>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section class="content-wrap contact" id="contact">
+            <h2>contact <span class="hapii">hapii</span></h2>
+            <div class="colleft content-wrap">
+                <img src="images/two.jpg" alt="contact-image" class="image">
+            </div>
+            <div class="colleft content-wrap">
+                <p>If you want to learn more about the <span class="hapii">hapii</span> lab, or if you are interested in working with us, please reach out!</p>
+            </div>
+            <div class="content-wrap colright">
+                <ul>
+                    <li class="iconC contactSpacing"><i class="fas fa-map-marker" aria-hidden="true"></i><div class="iconFormat">Dep. of Computer Science, Cal Poly Pomona, 3801 West Temple Avenue, Pomona, California, 91768</div></li>
+                    <li class="contactSpacing"><i class="far fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bsteichen [at] cpp.edu</li>
+                    <li class="contactSpacing"><i class="fas fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(909) 869-3437</li>
+                    <!-- <hr width="25" style="border: 0.02em solid">-->
+                    <li><i class="far fa-building" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8-44</li>
+                    <!--<li><i class="fas fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dep. of Computer Science,<br>&emsp;&emsp;Cal Poly Pomona,<br>&emsp;&emsp;3801 West Temple Avenue,<br>&emsp;&emsp;Pomona, California, 91768</li><span class="sr-only">Twitter</span>-->
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>	&copy; 2023 <span class="hapii">hapii</span></p>
+        </footer>
+    </main>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+        }
+    }
+
+        $(document).ready(function(){
+        // Add scrollspy to <body>
+        $('body').scrollspy({target: ".navbar", offset: 50});
+
+        // Add smooth scrolling on all links inside the navbar
+        $("#myNavbar a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }  // End if
+      });
+    });
+
+    /*
+    $(function() {
+    smoothScroll(1000);
+    });
+
+    // smoothScroll function is applied from the document ready function
+    function smoothScroll (duration) {
+        $('a[href^="#"]').on('click', function(event) {
+        var target = $( $(this).attr('href') );
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+             }, duration);
+            }
+        });
+    }
+        var $window = $(window);
+        var homeLink = $("a[href='#home']"),
+        aboutLink = $("a[href='#home']");
+
+        $window.on("scroll",function(e){
+     if($window.scrollTop() < $("#about").scrollTop()) {
+        homeLink.css("font-weight","bold");
+    }
+        });
+
+    var $window = $(window);
+    var homeLink = $("a[href='#home']"),
+            aboutLink = $("a[href='#about']"),
+            projectLink = $("a[href='#projects']") ;
+
+    $window.on("scroll",function(e){
+        if($window.scrollTop() < $("#about").offset().top) {
+            $("#myTopnav").find("a").css("font-weight",400);
+            homeLink.css("font-weight",900);
+        } else if ($window.scrollTop() > $("#about").offset().top && $window.scrollTop() < $("#projects").offset().top) {
+            $("#myTopnav").find("a").css("font-weight",400);
+            aboutLink.css("font-weight",900);
+        } else if ($window.scrollTop() > $("#projects").offset().top && $window.scrollTop() < $("#projects").offset().top) {
+            $("#myTopnav").find("a").css("font-weight",400);
+            aboutLink.css("font-weight",900);
+        }
+
+    });
+    */
+    </script>
+</body>
+</html>
