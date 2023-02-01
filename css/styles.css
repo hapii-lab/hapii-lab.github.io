@@ -602,7 +602,7 @@ ul {
 
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-width: 500px) {
 
       #introduction {
         padding: 0% 0%;
