@@ -620,3 +620,22 @@ ul {
     
 
 }
+
+@media screen and (max-height: 500px) {
+
+    #introduction {
+      padding: 0% 0%;
+  }
+
+
+  .overlay-effect h1{
+      padding-bottom: 30px;
+      font-size: 3em;
+    }
+
+    #introduction {
+      font-size: 0.4em;
+  }
+  
+
+}
