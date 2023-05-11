@@ -263,6 +263,11 @@ ______________________________________________*/
     padding-bottom: 2%;
 }
 
+.noSpace {
+    list-style: none;
+    padding-left: 0;
+}
+
 /* members
 ______________________________________________*/
 
@@ -279,7 +284,7 @@ ______________________________________________*/
 
 .bio{
     border: 1px solid white;
-    background: rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, .9);
     color: black;
 }
 
