@@ -212,6 +212,7 @@ ______________________________________________*/
 
 #introduction {
     background-color: white;
+    padding: 5% 10%;
     color: white;
     position: absolute;
     top: 50%;
@@ -221,6 +222,7 @@ ______________________________________________*/
 
 .hero-text {
     text-align: center;
+
     color: black;
     padding-top: 50px;
 }
