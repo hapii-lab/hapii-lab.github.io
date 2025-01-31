@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
   font-size: 1em;
+
+	
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -84,7 +86,7 @@ h2 {
 }
 
 main {
-    text-align: left;
+    text-align: justify;
 }
 
 /* Images
@@ -343,7 +345,7 @@ ______________________________________________*/
 .members {
     padding: 5% 10%;
     color: white;
-    background-image: linear-gradient(#A4D65E, #FFB81C);
+    background-image: linear-gradient(#FFB81C, #A4D65E);
 }
 
 .membersTextFormatt {
