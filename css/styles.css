@@ -75,7 +75,7 @@ h1, h2, h3 {
 h1 {
     /*color: #206452;*/
     color:black;
-    font-size: 6em;
+    font-size: 5em;
     text-align:center;
     margin: 0;
 }
@@ -163,8 +163,31 @@ nav a:hover {
 }
 
 h1 .hapii{
-    text-shadow: 2px 2px #FFB500;
+    font-size: 2em;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400%;
+    animation: move 60s ease infinite;
+    background-image: linear-gradient( 68.7deg,  rgba(29,173,235,1) 11%, rgba(137,149,250,1) 22%, rgba(229,109,212,1) 33%, rgba(255,68,128,1) 44%, rgba(255, 184, 28,1) 55%, rgba(255,68,128,1) 66%, rgba(229,109,212,1) 77%, rgba(137,149,250,1) 88%, rgba(29,173,235,1) 99%);
+
 }
+
+
+@keyframes move {
+            0%{
+                background-position: 100% 0%;
+            }
+
+            50%{
+                background-position: 0% 100%;
+            }
+
+	    100%{
+                background-position: 100% 0%;
+            }
+        }
+
 
 /* header
 ______________________________________________*/
@@ -211,6 +234,7 @@ button:hover {
 ______________________________________________*/
 
 #introduction {
+ /*
     background-color: white;
     padding: 5% 10%;
     color: white;
@@ -218,9 +242,18 @@ ______________________________________________*/
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
+ */
+
+	width: 100%;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
 }
 
-.hero-text {
+.logo-text {
     text-align: center;
 
     color: black;
