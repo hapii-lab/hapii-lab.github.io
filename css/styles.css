@@ -163,7 +163,7 @@ nav a:hover {
 }
 
 h1 .hapii{
-    font-size: 2em;
+    font-size: 2.5em;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -647,6 +647,10 @@ ul {
       #introduction {
         font-size: 0.6em;
     }
+
+h1 .hapii{
+   Font-size: 4em;
+}
     
 
 }
@@ -666,6 +670,10 @@ ul {
       #introduction {
         font-size: 0.4em;
     }
+
+h1 .hapii{
+   Font-size: 4em;
+}
     
 
 }
@@ -685,6 +693,10 @@ ul {
     #introduction {
       font-size: 0.4em;
   }
+
+h1 .hapii{
+   Font-size: 4em;
+}
   
 
 }
