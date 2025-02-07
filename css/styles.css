@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 1em;
-
+  Background-color: #FFFFFF;
 	
 }
 *, *:before, *:after {
@@ -50,7 +50,6 @@ footer {
     font-size: 1em;
     text-align: center;
     padding-bottom: 3px;
-    background-color: white;
     color: black;
 }
 
@@ -134,7 +133,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #275d38;
+    background-color: #A4D65E;
     color: white;
 }
 
@@ -416,8 +415,8 @@ ______________________________________________*/
 
 .equipment {
     padding: 5% 10%;
-    background-color: white;
     color: black;
+    Background-color: white;
 }
 
 .equipmentColumnLeft {
@@ -634,7 +633,15 @@ ul {
     color: black;
   }
 
+
+
+
   @media screen and (max-height: 700px) {
+
+
+.colcenterp.bio-text{
+    width: 100%;
+}
     .overlay-effect a {
 
     }
@@ -657,9 +664,12 @@ h1 .hapii{
 
 @media screen and (max-width: 500px) {
 
-      #introduction {
-        padding: 0% 0%;
-    }
+
+.colcenterp.bio-text{
+    width: 100%;
+}
+
+
 
 
     .overlay-effect h1{
@@ -674,14 +684,23 @@ h1 .hapii{
 h1 .hapii{
    Font-size: 4em;
 }
+
+  #myNavbar{
+	font-size: 1.5em;
+
+}
     
 
 }
 
 @media screen and (max-height: 500px) {
 
+
+.colcenterp.bio-text{
+    width: 100%;
+}
+
     #introduction {
-      padding: 0% 0%;
   }
 
 
