@@ -687,9 +687,21 @@ h1 .hapii{
 
   #myNavbar{
 	font-size: 1.5em;
+	line-height: 2em;
 
 }
-    
+
+
+P{
+	font-size: 1.4em;
+}
+
+
+   H3{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+ 
 
 }
 
@@ -699,9 +711,6 @@ h1 .hapii{
 .colcenterp.bio-text{
     width: 100%;
 }
-
-    #introduction {
-  }
 
 
   .overlay-effect h1{
@@ -715,6 +724,12 @@ h1 .hapii{
 
 h1 .hapii{
    Font-size: 4em;
+}
+
+  #myNavbar{
+	font-size: 1em;
+line-height: 2em;
+
 }
   
 
