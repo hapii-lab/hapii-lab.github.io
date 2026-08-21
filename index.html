@@ -68,6 +68,7 @@
       display: inline-flex; align-items: center; line-height: 1; text-decoration: none; white-space: nowrap;
       padding: .3rem .25rem .4rem;
       isolation: isolate;
+      cursor: pointer;
     }
     .brand::before {
       content: "";
@@ -95,13 +96,11 @@
       -webkit-text-fill-color: transparent;
       animation: hapiiFlow 28s linear infinite;
     }
-     .brand .hapii-wordmark {
-      font-size: 3.05rem;
-      background: linear-gradient(90deg, #ff6464 0%, #eb5f8e 34%, #d66fca 68%, #b780dc 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
+     .brand-logo {
+      display: block;
+      width: 78px;
+      height: auto;
+      object-fit: contain;
     }
     @keyframes hapiiFlow {
       0% { background-position: 0% 50%; }
@@ -267,31 +266,28 @@
     :focus-visible { outline: 3px solid rgba(0,131,138,.28); outline-offset: 3px; }
 
 
-    /* Top-left hapii hover animation */
+    /* Top-left smile hover animation: subtle tilt + pulse, no upward movement */
     .brand {
+      transform-origin: center;
       transition: transform .28s ease;
     }
 
-    .brand .hapii-wordmark {
-      transition: filter .35s ease, transform .35s ease, background-position .55s ease;
-      background-size: 180% 100%;
-      background-position: 15% 50%;
+    .brand .brand-logo {
+      transform-origin: center;
+      transition: transform .32s cubic-bezier(.2,.8,.2,1), filter .32s ease;
     }
 
     .brand:hover {
-      transform: translateY(-2px) scale(1.035);
+      transform: rotate(-2deg);
     }
 
-    .brand:hover .hapii-wordmark {
-      filter:
-        drop-shadow(0 0 10px rgba(255, 105, 135, .20))
-        drop-shadow(0 0 20px rgba(210, 105, 220, .16))
-        drop-shadow(0 0 34px rgba(137, 149, 250, .12));
-      background-position: 85% 50%;
+    .brand:hover .brand-logo {
+      transform: scale(1.07) rotate(2deg);
+      filter: drop-shadow(0 7px 10px rgba(210, 105, 220, .16));
     }
 
-    .brand:active {
-      transform: translateY(0) scale(.99);
+    .brand:active .brand-logo {
+      transform: scale(.98);
     }
 
     @media (max-width: 900px) {
@@ -356,7 +352,7 @@
 
   <header class="site-header">
     <nav class="nav-wrap" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="hapii Lab home"><span class="hapii-wordmark">hapii</span></a>
+      <a class="brand" href="#top" aria-label="hapii Lab home"><img class="brand-logo" src="./images/smile.png" alt=""></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
       <div class="nav-links" id="nav-links">
         <a href="#about">about</a>
