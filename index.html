@@ -188,11 +188,36 @@
 
     .current-projects-heading { margin: 0 0 0.9rem; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.01em; color: var(--ink); }
     .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .research-grid + .research-grid { margin-top: 2.5rem; }
     .research-card {
       border: 1px solid var(--line); border-radius: var(--radius); background: white; padding: 1.6rem;
       box-shadow: 0 8px 24px rgba(25,68,71,.06);
     }
     .research-card p { margin: 0; color: var(--muted); }
+    .research-card a {font-weight: 700;}
+    .publication-links { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .publication-links strong { display: block; margin-bottom: .35rem; color: var(--ink); font-size: .9rem; }
+    .publication-links a, .publication-links .publication-in-press { display: block; font-size: .9rem; font-weight: 700; }
+    .publication-links a + a, .publication-links a + .publication-in-press, .publication-links .publication-in-press + a { margin-top: .3rem; }
+    .publication-links .publication-in-press { color: var(--muted); }
+    details.publications {
+      margin-top: 2.5rem; padding: 1.35rem; border: 1px solid var(--line); border-radius: 22px;
+      background: white;
+    }
+    details.publications > summary {
+      cursor: pointer; list-style: none; display: flex; align-items: center; gap: .35rem;
+      font-size: 1.5rem; line-height: 1.2; font-weight: 700; color: var(--ink); justify-content: flex-start;
+    }
+    details.publications > summary::-webkit-details-marker { display: none; }
+    details.publications > summary::after { content: "+"; margin-left: 0; color: var(--teal); font-size: 1.35rem; font-weight: 600; }
+    details.publications[open] > summary::after { content: "-"; }
+    .full-publications { margin-top: 1.4rem; }
+    .full-publications h4 { margin: 1.4rem 0 .7rem; color: var(--teal-dark); font-size: 1rem; }
+    .full-publications h4:first-child { margin-top: 0; }
+    .full-publications ul { margin: 0; padding-left: 1.25rem; }
+    .full-publications li { margin: 0 0 .75rem; color: var(--muted); }
+    .full-publications li:last-child { margin-bottom: 0; }
+    .full-publications a { font-weight: 700; }
 
     .faculty-card {
       display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: center;
@@ -231,7 +256,7 @@
     details.alumni > summary span { font-size: .9rem; font-weight: 500; color: var(--muted); }
     details.alumni > summary::-webkit-details-marker { display: none; }
     details.alumni > summary::after { content: "+"; margin-left: 0; color: var(--teal); font-size: 1.35rem; font-weight: 600; }
-    details.alumni[open] > summary::after { content: "–"; }
+    details.alumni[open] > summary::after { content: "-"; }
     details.alumni[open] > summary { margin-bottom: 1.1rem; }
     .alumni-grid { margin-top: 0; padding: 0; }
 
@@ -400,19 +425,100 @@
           <article class="research-card">
             <span class="eyebrow">Current research project</span>
             <h3>Multilingual STEM</h3>
-            <p>Multilingual learners can face barriers in STEM when academic language, rather than conceptual understanding, limits access to learning. This research explores human-centered multilingual technologies that combine adaptive interfaces, multimodal support, and AI-driven personalization to help students learn across languages while supporting teachers, tutors, and families.</p>
+            <p>Multilingual learners can encounter barriers in STEM when academic language, rather than conceptual understanding, restricts their access to learning and full participation. This research investigates human-centered multilingual technologies that integrate adaptive interfaces, multimodal resources, and AI-driven personalization to help students navigate complex concepts and learning materials across languages, while offering valuable tools and guidance to teachers, tutors, and families throughout the learning process.</p>
+            <div class="publication-links">
+              <strong>Sample publications</strong>
+              <a href="https://inria.hal.science/hal-05629465/document" target="_blank" rel="noopener">Math-Language Minigames</a>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3773077.3812145" target="_blank" rel="noopener">Homework Support for Bilingual Students</a>
+            </div>
           </article>
+          
           <article class="research-card">
             <span class="eyebrow">Current research project</span>
             <h3>Student Success Dashboards</h3>
-            <p>In collaboration with the Student Success Strategic Initiatives team at the CSU Office of the Chancellor, the hapii lab works on dashboards that help faculty, staff, and administrators understand student progress, identify trends, and surface equity gaps. This research explores AI-driven visualization and interaction techniques that make dashboards more adaptive and explainable, helping users discover patterns and turn data into student-support decisions.</p>
+            <p>In collaboration with the Student Success Strategic Initiatives team at the CSU Office of the Chancellor, the hapii lab develops dashboards that help faculty, staff, and administrators understand student progress, identify meaningful trends, and surface equity gaps. This research explores AI-driven visualization and interaction techniques that make dashboards more adaptive and explainable, helping users discover patterns and turn complex data into informed student-support decisions.</p>
+            <div class="publication-links">
+              <strong>Related Links</strong>
+              <a href="https://www.calstate.edu/data-center/student-success-strategic-initiatives/Pages/default.aspx" target="_blank" rel="nooperner">Student Success Strategic Initiatives</a>
+            </div>
           </article>
+
           <article class="research-card">
             <span class="eyebrow">Current research project</span>
             <h3>AI-Enhanced Language Assessment</h3>
-            <p>This research explores how eye tracking can capture real-time language processing during online assessments, and how machine learning can combine gaze behavior with test performance to better understand language proficiency and academic readiness. The goal is to develop scalable, human-centered assessment methods that augment traditional scores with cognitive evidence while prioritizing validity, privacy, fairness, and interpretability.</p>
+            <p>This research investigates how eye tracking can complement traditional language assessments by capturing how test takers process language in real time. By combining gaze behavior, test performance, and measures of academic attainment, the project will develop machine-learning models to better understand language proficiency and predict academic success. The goal is to provide scalable cognitive evidence that strengthens assessment validity while protecting test-taker privacy.</p>
           </article>
         </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="eyebrow">Past research project</span>
+            <h3>Personalized Multilingual Information Access</h3>
+            <p>This research investigated how multilingual users search for, select, and consume information across languages. It examined multilingual information seeking across desktop and mobile interfaces, including whether eye-gaze behavior can be used to infer a search user’s language proficiency, as well as methods for overcoming language silos in recommender systems. The work seeks to design adaptive information access systems that better support multilingual users’ language preferences, needs, and search behaviors.</p>
+            <div class="publication-links">
+              <strong>Sample publications</strong>
+              <a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24443" target="_blank" rel="noopener">How Do Multilingual Users Search?</a>
+              <a href="https://www.tandfonline.com/doi/full/10.1080/10447318.2019.1662636" target="_blank" rel="noopener">Multilingual News</a>
+            </div>
+          </article>
+          <article class="research-card">
+            <span class="eyebrow">Past research project</span>
+            <h3>Adaptive Information Visualization</h3>
+            <p>This research explored how information visualizations can adapt to individual differences in users’ characteristics, abilities, and preferences. It investigated interactive visualization aids and used eye-tracking data with computational modeling to infer human factors that influence how users process visual information during complex visual analysis tasks. The findings support adaptive, personalized visualization systems that provide appropriate assistance based on each user’s characteristics and behavior.</p>
+            <div class="publication-links">
+              <strong>Sample publications</strong>
+              <a href="https://www.frontiersin.org/articles/10.3389/frai.2019.00022/full" target="_blank" rel="noopener">Towards Adaptive Information Visualization</a>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-55109-3_7" target="_blank" rel="noopener">Computational Methods to Infer Human Factors</a>
+            </div>
+          </article>
+          <article class="research-card">
+            <span class="eyebrow">Past research project</span>
+            <h3>Misleading Visualizations and Human-AI Synergy</h3>
+            <p>This research investigated why people are susceptible to misleading data visualizations and how AI can reduce misinterpretation. It examined how visualization literacy, user characteristics, graph design, and device context affect comprehension, while comparing human and AI performance to determine when personalized assistance is most valuable. The work advances context-aware support that helps users recognize manipulation and interpret visual evidence accurately and confidently.</p>
+            <div class="publication-links">
+              <strong>Sample publication</strong>
+              <span class="publication-in-press">Humans and AI against Misleading Information Visualizations (in press)</span>
+            </div>
+          </article>
+        </div>
+        <details class="publications">
+          <summary>Full publication list</summary>
+          <div class="full-publications">
+            <h4>Book chapter</h4>
+            <ul>
+              <li>Steichen, B. <a href="https://doi.org/10.1007/978-3-031-55109-3_7" target="_blank" rel="noopener">Computational Methods to Infer Human Factors for Adaptation and Personalization Using Eye Tracking</a>. <em>A Human-Centered Perspective of Intelligent Personalized Environments and Systems</em>, Human-Computer Interaction Series, Springer, 2024.</li>
+            </ul>
+
+            <h4>Journal, conference, and workshop articles</h4>
+            <ul>
+              <li>Steichen, B., Isaacs, M., To, S., Tran, K., and Varela, D. Humans and AI against Misinformation-Understanding the Role of User Characteristics on Susceptibility to Misleading Visualizations &amp; the Potential of AI Assistance. SYNERGY 2026, co-located with AVI 2026, <em>in press</em>, 2026.</li>
+              <li>Steichen, B., Mahadevappa, S., Gershman, M., Geronimo, M., Kermad, A., Stoehr, K., and Figueira, S. <a href="https://inria.hal.science/hal-05629465/document" target="_blank" rel="noopener">Math-Language Minigames-Helping Bilingual Children Learn Mathematics by Closing the Language Gap</a>. International Workshop on Designing Advanced Interfaces for Learning and Teaching, co-located with AVI 2026, 2026.</li>
+              <li>Mahadevappa, S., Dasari, W. W., Nagalapatti, G., Steichen, B., and Figueira, S. <a href="https://dl.acm.org/doi/pdf/10.1145/3773077.3812145" target="_blank" rel="noopener">MathTarea: Mathematics Homework Support for Bilingual Students</a>. IDC ’26, pp. 1179-1185, 2026.</li>
+              <li>Steichen, B., Ling, C., and Figueira, S. <a href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2023.2238978" target="_blank" rel="noopener">Multilingual News Search-A Comparative User Study of Desktop and Mobile Interfaces</a>. <em>International Journal of Human-Computer Interaction</em>, 40(19), pp. 5648-5663, 2024.</li>
+              <li>Steichen, B., Kosasih, W., and Becerra, C. <a href="https://dl.acm.org/doi/abs/10.1145/3498366.3505771" target="_blank" rel="noopener">Inferring Search User Language Proficiency from Eye Gaze Data</a>. CHIIR 2022, pp. 211-220, 2022.</li>
+              <li>Fu, B., and Steichen, B. <a href="https://dl.acm.org/doi/fullHtml/10.1145/3531073.3531081" target="_blank" rel="noopener">Impending Success or Failure? An Investigation of Gaze-Based User Predictions During Interaction with Ontology Visualizations</a>. AVI 2022, Article 7, pp. 1-9, 2022.</li>
+              <li>Fu, B., and Steichen, B. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJIIDS.2022.120143" target="_blank" rel="noopener">Supporting User-Centered Ontology Visualization: Predictive Analytics Using Eye Gaze to Enhance Human-Ontology Interaction</a>. <em>International Journal of Intelligent Information and Database Systems</em>, 15(1), 2022.</li>
+              <li>Steichen, B., and Lowe, R. <a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24443" target="_blank" rel="noopener">How Do Multilingual Users Search? An Investigation of Query and Result List Language Choices</a>. <em>Journal of the Association for Information Science and Technology</em>, 72(6), pp. 759-776, 2021.</li>
+              <li>Steichen, B., and Fu, B. <a href="https://www.frontiersin.org/articles/10.3389/fcomp.2020.562290/full" target="_blank" rel="noopener">Cognitive Style and Information Visualization-Modeling Users Through Eye Gaze Data</a>. <em>Frontiers in Computer Science</em>, 2, 49, 2020.</li>
+              <li>Steichen, B., Castillo, C., and Scroggins, K. <a href="https://dl.acm.org/doi/abs/10.1145/3340631.3394877" target="_blank" rel="noopener">Personalized Multilingual Search-Predicting Search Result List Language Preferences</a>. UMAP 2020, pp. 343-347, 2020.</li>
+              <li>Steichen, B., Fu, B., and Nguyen, T. <a href="https://dl.acm.org/doi/abs/10.1145/3340631.3394881" target="_blank" rel="noopener">Inferring Cognitive Style from Eye Gaze Behavior During Information Visualization Usage</a>. UMAP 2020, pp. 348-352, 2020.</li>
+              <li>Fu, B., Steichen, B., and McBride, A. <a href="https://dl.acm.org/doi/10.1145/3405962.3405966" target="_blank" rel="noopener">Tumbling to Succeed: A Predictive Analysis of User Success in Interactive Ontology Visualization</a>. WIMS ’20, 2020.</li>
+              <li>Ling, C., Steichen, B., and Figueira, S. <a href="https://www.tandfonline.com/doi/full/10.1080/10447318.2019.1662636" target="_blank" rel="noopener">Multilingual News-An Investigation of Consumption, Querying, and Search Result Selection Behaviors</a>. <em>International Journal of Human-Computer Interaction</em>, 36(6), 2019.</li>
+              <li>Steichen, B., and Fu, B. <a href="https://www.frontiersin.org/articles/10.3389/frai.2019.00022/full" target="_blank" rel="noopener">Towards Adaptive Information Visualization-A Study of Information Visualization Aids and the Role of User Cognitive Style</a>. <em>Frontiers in Artificial Intelligence</em>, 2, 22, 2019.</li>
+              <li>Fu, B., Steichen, B., and Zhang, W. <a href="http://dx.doi.org/10.1142/S1793351X1940018X" target="_blank" rel="noopener">Towards Adaptive Ontology Visualization-Predicting User Success from Behavioral Data</a>. <em>International Journal of Semantic Computing</em>, 13(4), 2019.</li>
+              <li>Fu, B., and Steichen, B. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8665670" target="_blank" rel="noopener">Using Behavior Data to Predict User Success in Ontology Class Mapping-An Application of Machine Learning in Interaction Analysis</a>. ICSC 2019, pp. 216-223, <em>Best Paper nominee</em>, 2019.</li>
+              <li>Ling, C., Steichen, B., and Choulos, A. <a href="https://dl.acm.org/citation.cfm?id=3176383" target="_blank" rel="noopener">A Comparative User Study of Interactive Multilingual Search Interfaces</a>. CHIIR ’18, pp. 211-220, 2018.</li>
+            </ul>
+
+            <h4>Conference posters</h4>
+            <ul>
+              <li>Gadon, A., Steichen, B., and Leon, J. Bridging the Online Language Gap with Polyvox. Southern California Conferences for Undergraduate Research, 2019.</li>
+              <li>Castillo, C., Scroggins, K., and Steichen, B. Supporting Multilingual Users Through Personalized Multilingual Search. Southern California Conferences for Undergraduate Research, 2019.</li>
+              <li>Daroy, P., and Steichen, B. Personalized Information Visualization Through the Use of Adaptive Overlays. Southern California Conferences for Undergraduate Research, 2019.</li>
+              <li>Castillo, C., Chen, K., and Steichen, B. Towards Multilingual Search-Gathering Multilingual Query Logs Using Crowdsourcing. Southern California Conferences for Undergraduate Research, 2018.</li>
+              <li>Pierre-Louis, D., Arima, J., and Steichen, B. Cookies for Breakfast, Lunch, and Dinner: Designing a GDPR-Compliant Accountability Tool for Web Services and Web Apps. Southern California Conferences for Undergraduate Research, 2018.</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </section>
 
