@@ -64,23 +64,47 @@
       padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 2rem;
     }
     .brand {
-      position: relative;
-      display: inline-flex; align-items: center; line-height: 1; text-decoration: none; white-space: nowrap;
-      padding: .3rem .25rem .4rem;
-      isolation: isolate;
-      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 1rem;
+      line-height: 1; text-decoration: none; white-space: nowrap;
+      padding: .25rem 0;
     }
-    .brand::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      inset: 8% -18% 2%;
-      background: linear-gradient(90deg, rgba(255,100,100,.11), rgba(235,95,142,.12), rgba(183,128,220,.13));
-      filter: blur(22px);
-      border-radius: 50%;
-      transition: opacity .18s ease, filter .18s ease;
+    .cpp-link,
+    .hapii-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
     }
-    .brand:hover::before { opacity: .95; filter: blur(19px); }
+    .cpp-link {
+      height: 54px;
+      flex: 0 0 auto;
+      transition: none;
+    }
+    .cpp-link:hover,
+    .cpp-link:focus-visible { opacity: .82; }
+    .cpp-logo {
+      display: block;
+      width: auto;
+      height: 54px;
+      object-fit: contain;
+    }
+    .brand-divider {
+      width: 1px;
+      height: 44px;
+      flex: 0 0 auto;
+      background: linear-gradient(180deg, transparent, rgba(0,80,48,.42), transparent);
+    }
+    .hapii-link {
+      color: inherit;
+      transform: translateY(3px);
+    }
+    .hapii-header-wordmark {
+      display: inline-block;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      line-height: .9;
+      transition: color .18s ease;
+    }
+    .hapii-link:hover .hapii-header-wordmark,
+    .hapii-link:focus-visible .hapii-header-wordmark { color: var(--teal-dark); }
     .hapii-wordmark {
       font-family: "Pecita", cursive;
       font-weight: 400;
@@ -95,12 +119,6 @@
       color: transparent;
       -webkit-text-fill-color: transparent;
       animation: hapiiFlow 28s linear infinite;
-    }
-     .brand-logo {
-      display: block;
-      width: 56px;
-      height: auto;
-      object-fit: contain;
     }
     @keyframes hapiiFlow {
       0% { background-position: 0% 50%; }
@@ -291,30 +309,6 @@
     :focus-visible { outline: 3px solid rgba(0,131,138,.28); outline-offset: 3px; }
 
 
-    /* Top-left smile hover animation: subtle tilt + pulse, no upward movement */
-    .brand {
-      transform-origin: center;
-      transition: transform .28s ease;
-    }
-
-    .brand .brand-logo {
-      transform-origin: center;
-      transition: transform .32s cubic-bezier(.2,.8,.2,1), filter .32s ease;
-    }
-
-    .brand:hover {
-      transform: rotate(-2deg);
-    }
-
-    .brand:hover .brand-logo {
-      transform: scale(1.07) rotate(2deg);
-      filter: drop-shadow(0 7px 10px rgba(210, 105, 220, .16));
-    }
-
-    .brand:active .brand-logo {
-      transform: scale(.98);
-    }
-
     @media (max-width: 900px) {
       .people-grid { grid-template-columns: repeat(3, 1fr); }
       .faculty-card, .equipment-grid, .contact-panel { grid-template-columns: 1fr; }
@@ -322,7 +316,11 @@
       .contact-panel img { max-height: 360px; }
     }
     @media (max-width: 720px) {
-      .nav-wrap { min-height: 66px; padding: 0 18px; }
+      .nav-wrap { min-height: 66px; padding: 0 18px; gap: 1rem; }
+      .cpp-link { height: 44px; }
+      .cpp-logo { height: 44px; }
+      .brand-divider { height: 36px; }
+      .hapii-header-wordmark { font-size: 1.8rem; }
       .menu-toggle { display: inline-grid; place-items: center; }
       .nav-links {
         display: none; position: absolute; left: 12px; right: 12px; top: 72px;
@@ -354,6 +352,11 @@
       .people-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 460px) {
+      .brand { gap: .75rem; }
+      .cpp-link { height: 36px; }
+      .cpp-logo { height: 36px; }
+      .brand-divider { height: 30px; }
+      .hapii-header-wordmark { font-size: 1.65rem; }
       .hero { padding: 54px 18px 50px; }
       .hero-logo { font-size: clamp(4.8rem, 29vw, 6.6rem); }
       .kicker {
@@ -377,7 +380,15 @@
 
   <header class="site-header">
     <nav class="nav-wrap" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="hapii Lab home"><img class="brand-logo" src="./images/smile.png" alt=""></a>
+      <div class="brand">
+        <a class="cpp-link" href="https://www.cpp.edu/" aria-label="Cal Poly Pomona home">
+          <img class="cpp-logo" src="logo.png" alt="Cal Poly Pomona">
+        </a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="hapii-link" href="#top" aria-label="hapii Lab home">
+          <span class="hapii-wordmark hapii-header-wordmark">hapii</span>
+        </a>
+      </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
       <div class="nav-links" id="nav-links">
         <a href="#about">about</a>
@@ -504,7 +515,7 @@
               <li>Fu, B., Steichen, B., and McBride, A. <a href="https://dl.acm.org/doi/10.1145/3405962.3405966" target="_blank" rel="noopener">Tumbling to Succeed: A Predictive Analysis of User Success in Interactive Ontology Visualization</a>. WIMS ’20, 2020.</li>
               <li>Ling, C., Steichen, B., and Figueira, S. <a href="https://www.tandfonline.com/doi/full/10.1080/10447318.2019.1662636" target="_blank" rel="noopener">Multilingual News-An Investigation of Consumption, Querying, and Search Result Selection Behaviors</a>. <em>International Journal of Human-Computer Interaction</em>, 36(6), 2019.</li>
               <li>Steichen, B., and Fu, B. <a href="https://www.frontiersin.org/articles/10.3389/frai.2019.00022/full" target="_blank" rel="noopener">Towards Adaptive Information Visualization-A Study of Information Visualization Aids and the Role of User Cognitive Style</a>. <em>Frontiers in Artificial Intelligence</em>, 2, 22, 2019.</li>
-              <li>Fu, B., Steichen, B., and Zhang, W. <a href="http://dx.doi.org/10.1142/S1793351X1940018X" target="_blank" rel="noopener">Towards Adaptive Ontology Visualization-Predicting User Success from Behavioral Data</a>. <em>International Journal of Semantic Computing</em>, 13(4), 2019.</li>
+              <li>Fu, B., Steichen, B., and Zhang, W. <a href="https://dx.doi.org/10.1142/S1793351X1940018X" target="_blank" rel="noopener">Towards Adaptive Ontology Visualization-Predicting User Success from Behavioral Data</a>. <em>International Journal of Semantic Computing</em>, 13(4), 2019.</li>
               <li>Fu, B., and Steichen, B. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8665670" target="_blank" rel="noopener">Using Behavior Data to Predict User Success in Ontology Class Mapping-An Application of Machine Learning in Interaction Analysis</a>. ICSC 2019, pp. 216-223, <em>Best Paper nominee</em>, 2019.</li>
               <li>Ling, C., Steichen, B., and Choulos, A. <a href="https://dl.acm.org/citation.cfm?id=3176383" target="_blank" rel="noopener">A Comparative User Study of Interactive Multilingual Search Interfaces</a>. CHIIR ’18, pp. 211-220, 2018.</li>
             </ul>
