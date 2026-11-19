@@ -237,6 +237,22 @@
     details.publications > summary::-webkit-details-marker { display: none; }
     details.publications > summary::after { content: "+"; margin-left: 0; color: var(--teal); font-size: 1.35rem; font-weight: 600; }
     details.publications[open] > summary::after { content: "-"; }
+    details.project-group {
+      margin-top: 2.5rem; padding: 1.35rem;
+      border: 1px solid var(--line); border-radius: 22px;
+      background: white;
+    }
+    details.project-group > summary {
+      cursor: pointer; list-style: none; display: flex; align-items: center; gap: .35rem;
+      font-size: 1.5rem; line-height: 1.2; font-weight: 700; color: var(--ink);
+      justify-content: flex-start;
+    }
+    details.project-group > summary::-webkit-details-marker { display: none; }
+    details.project-group > summary::after {
+      content: "+"; margin-left: 0; color: var(--teal); font-size: 1.35rem; font-weight: 600;
+    }
+    details.project-group[open] > summary::after { content: "-"; }
+    details.project-group .research-grid { margin-top: 1.4rem; }
     .full-publications { margin-top: 1.4rem; }
     .full-publications h4 { margin: 1.4rem 0 .7rem; color: var(--teal-dark); font-size: 1rem; }
     .full-publications h4:first-child { margin-top: 0; }
@@ -287,7 +303,14 @@
     .alumni-grid { margin-top: 0; padding: 0; }
 
     .equipment-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 2rem; align-items: center; }
-    .equipment-grid img { width: 100%; max-height: 380px; object-fit: contain; border-radius: var(--radius); background: white; border: 1px solid var(--line); padding: 1.2rem; }
+    .lab-carousel-wrap { display: flex; flex-direction: column; gap: .75rem; }
+    .lab-carousel { position: relative; width: 100%; height: 380px; overflow: hidden; border-radius: var(--radius); background: white; border: 1px solid var(--line); }
+    .lab-carousel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 1.2rem; opacity: 0; transition: opacity .6s ease; }
+    .lab-carousel img.is-active { opacity: 1; }
+    .lab-carousel-controls { display: flex; justify-content: center; gap: .5rem; }
+    .lab-carousel-dot { width: 11px; height: 11px; padding: 0; border: 1px solid var(--teal); border-radius: 50%; background: transparent; cursor: pointer; }
+    .lab-carousel-dot.is-active { background: var(--teal); }
+    .lab-carousel-dot:hover, .lab-carousel-dot:focus-visible { background: var(--avocado); }
     .equipment-grid p { color: var(--muted); font-size: 1.08rem; }
 
     .contact-panel {
@@ -442,8 +465,7 @@
         </div>
         <div class="research-grid">
           <article class="research-card">
-            <span class="eyebrow">Current research project</span>
-            <h3>Multilingual STEM</h3>
+            <h3 class="eyebrow">Multilingual STEM</h3>
             <p>Multilingual learners can encounter barriers in STEM when academic language, rather than conceptual understanding, restricts their access to learning and full participation. This research investigates human-centered multilingual technologies that integrate adaptive interfaces, multimodal resources, and AI-driven personalization to help students navigate complex concepts and learning materials across languages, while offering valuable tools and guidance to teachers, tutors, and families throughout the learning process.</p>
             <div class="publication-links">
               <strong>Sample publications</strong>
@@ -453,8 +475,7 @@
           </article>
           
           <article class="research-card">
-            <span class="eyebrow">Current research project</span>
-            <h3>Student Success Dashboards</h3>
+            <h3 class="eyebrow">Student Success Dashboards</h3>
             <p>In collaboration with the Student Success Strategic Initiatives team at the CSU Office of the Chancellor, the hapii lab develops dashboards that help faculty, staff, and administrators understand student progress, identify meaningful trends, and surface equity gaps. This research explores AI-driven visualization and interaction techniques that make dashboards more adaptive and explainable, helping users discover patterns and turn complex data into informed student-support decisions.</p>
             <div class="publication-links">
               <strong>Related Links</strong>
@@ -463,42 +484,41 @@
           </article>
 
           <article class="research-card">
-            <span class="eyebrow">Current research project</span>
-            <h3>AI-Enhanced Language Assessment</h3>
+            <h3 class="eyebrow">AI-Enhanced Language Assessment</h3>
             <p>This research investigates how eye tracking can complement traditional language assessments by capturing how test takers process language in real time. By combining gaze behavior, test performance, and measures of academic attainment, the project will develop machine-learning models to better understand language proficiency and predict academic success. The goal is to provide scalable cognitive evidence that strengthens assessment validity while protecting test-taker privacy.</p>
           </article>
         </div>
-        <div class="research-grid">
-          <article class="research-card">
-            <span class="eyebrow">Past research project</span>
-            <h3>Personalized Multilingual Information Access</h3>
-            <p>This research investigated how multilingual users search for, select, and consume information across languages. It examined multilingual information seeking across desktop and mobile interfaces, including whether eye-gaze behavior can be used to infer a search user’s language proficiency, as well as methods for overcoming language silos in recommender systems. The work seeks to design adaptive information access systems that better support multilingual users’ language preferences, needs, and search behaviors.</p>
-            <div class="publication-links">
-              <strong>Sample publications</strong>
-              <a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24443" target="_blank" rel="noopener">How Do Multilingual Users Search?</a>
-              <a href="https://www.tandfonline.com/doi/full/10.1080/10447318.2019.1662636" target="_blank" rel="noopener">Multilingual News</a>
-            </div>
-          </article>
-          <article class="research-card">
-            <span class="eyebrow">Past research project</span>
-            <h3>Adaptive Information Visualization</h3>
-            <p>This research explored how information visualizations can adapt to individual differences in users’ characteristics, abilities, and preferences. It investigated interactive visualization aids and used eye-tracking data with computational modeling to infer human factors that influence how users process visual information during complex visual analysis tasks. The findings support adaptive, personalized visualization systems that provide appropriate assistance based on each user’s characteristics and behavior.</p>
-            <div class="publication-links">
-              <strong>Sample publications</strong>
-              <a href="https://www.frontiersin.org/articles/10.3389/frai.2019.00022/full" target="_blank" rel="noopener">Towards Adaptive Information Visualization</a>
-              <a href="https://link.springer.com/chapter/10.1007/978-3-031-55109-3_7" target="_blank" rel="noopener">Computational Methods to Infer Human Factors</a>
-            </div>
-          </article>
-          <article class="research-card">
-            <span class="eyebrow">Past research project</span>
-            <h3>Misleading Visualizations and Human-AI Synergy</h3>
-            <p>This research investigated why people are susceptible to misleading data visualizations and how AI can reduce misinterpretation. It examined how visualization literacy, user characteristics, graph design, and device context affect comprehension, while comparing human and AI performance to determine when personalized assistance is most valuable. The work advances context-aware support that helps users recognize manipulation and interpret visual evidence accurately and confidently.</p>
-            <div class="publication-links">
-              <strong>Sample publication</strong>
-              <span class="publication-in-press">Humans and AI against Misleading Information Visualizations (in press)</span>
-            </div>
-          </article>
-        </div>
+        <details class="project-group">
+          <summary>Past projects</summary>
+          <div class="research-grid">
+            <article class="research-card">
+              <h3 class="eyebrow">Personalized Multilingual Information Access</h3>
+              <p>This research investigated how multilingual users search for, select, and consume information across languages. It examined multilingual information seeking across desktop and mobile interfaces, including whether eye-gaze behavior can be used to infer a search user’s language proficiency, as well as methods for overcoming language silos in recommender systems. The work seeks to design adaptive information access systems that better support multilingual users’ language preferences, needs, and search behaviors.</p>
+              <div class="publication-links">
+                <strong>Sample publications</strong>
+                <a href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24443" target="_blank" rel="noopener">How Do Multilingual Users Search?</a>
+                <a href="https://www.tandfonline.com/doi/full/10.1080/10447318.2019.1662636" target="_blank" rel="noopener">Multilingual News</a>
+              </div>
+            </article>
+            <article class="research-card">
+              <h3 class="eyebrow">Adaptive Information Visualization</h3>
+              <p>This research explored how information visualizations can adapt to individual differences in users’ characteristics, abilities, and preferences. It investigated interactive visualization aids and used eye-tracking data with computational modeling to infer human factors that influence how users process visual information during complex visual analysis tasks. The findings support adaptive, personalized visualization systems that provide appropriate assistance based on each user’s characteristics and behavior.</p>
+              <div class="publication-links">
+                <strong>Sample publications</strong>
+                <a href="https://www.frontiersin.org/articles/10.3389/frai.2019.00022/full" target="_blank" rel="noopener">Towards Adaptive Information Visualization</a>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-55109-3_7" target="_blank" rel="noopener">Computational Methods to Infer Human Factors</a>
+              </div>
+            </article>
+            <article class="research-card">
+              <h3 class="eyebrow">Misleading Visualizations and Human-AI Synergy</h3>
+              <p>This research investigated why people are susceptible to misleading data visualizations and how AI can reduce misinterpretation. It examined how visualization literacy, user characteristics, graph design, and device context affect comprehension, while comparing human and AI performance to determine when personalized assistance is most valuable. The work advances context-aware support that helps users recognize manipulation and interpret visual evidence accurately and confidently.</p>
+              <div class="publication-links">
+                <strong>Sample publication</strong>
+                <span class="publication-in-press">Humans and AI against Misleading Information Visualizations (in press)</span>
+              </div>
+            </article>
+          </div>
+        </details>
         <details class="publications">
           <summary>Full publication list</summary>
           <div class="full-publications">
@@ -1069,7 +1089,18 @@
           <h2><span class="hapii-wordmark">hapii</span> lab</h2>
         </div>
         <div class="equipment-grid">
-          <img src="images/Eyetracker.png" alt="Eye-tracking equipment used in the hapii Lab" loading="lazy" decoding="async">
+          <div class="lab-carousel-wrap">
+            <div class="lab-carousel" aria-label="Images of the hapii Lab">
+              <img class="is-active" src="images/Eyetracker.png" alt="Eye-tracking equipment used in the hapii Lab" loading="lazy" decoding="async">
+              <img src="images/lab2.png" alt="Interior of the hapii Lab with workstations" loading="lazy" decoding="async">
+              <img src="images/lab3.jpeg" alt="Computer workstation used for a hapii Lab study" loading="lazy" decoding="async">
+            </div>
+            <div class="lab-carousel-controls" aria-label="Choose a hapii Lab image">
+              <button class="lab-carousel-dot is-active" type="button" aria-label="Show image 1" aria-current="true"></button>
+              <button class="lab-carousel-dot" type="button" aria-label="Show image 2"></button>
+              <button class="lab-carousel-dot" type="button" aria-label="Show image 3"></button>
+            </div>
+          </div>
           <p>The lab is equipped with state-of-the-art tools for user experience research and data analysis, including eye-tracking systems and high-performance computing resources. These capabilities allow us to conduct in-depth studies of natural user behavior and experience.</p>
         </div>
       </div>
@@ -1114,6 +1145,38 @@
         toggle.setAttribute('aria-label', 'Open navigation');
       });
     });
+
+    const labSlides = document.querySelectorAll('.lab-carousel img');
+    const labDots = document.querySelectorAll('.lab-carousel-dot');
+    let labSlideIndex = 0;
+    let labTimer;
+
+    function showLabSlide(index) {
+      labSlides[labSlideIndex].classList.remove('is-active');
+      labDots[labSlideIndex].classList.remove('is-active');
+      labDots[labSlideIndex].removeAttribute('aria-current');
+      labSlideIndex = index;
+      labSlides[labSlideIndex].classList.add('is-active');
+      labDots[labSlideIndex].classList.add('is-active');
+      labDots[labSlideIndex].setAttribute('aria-current', 'true');
+    }
+
+    function restartLabTimer() {
+      clearInterval(labTimer);
+      labTimer = setInterval(() => {
+        showLabSlide((labSlideIndex + 1) % labSlides.length);
+      }, 5000);
+    }
+
+    if (labSlides.length > 1) {
+      labDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showLabSlide(index);
+          restartLabTimer();
+        });
+      });
+      restartLabTimer();
+    }
   </script>
 </body>
 </html>
